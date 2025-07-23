@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #c4dfdf;
+  --color-secondary: #d2e9e9;
+  --color-tertiary: #e3f4f4;
+  --color-background: #f8f6f4;
+  --color-text: #333333;
+}
+
+body {
+  background: linear-gradient(to bottom right, var(--color-background), var(--color-tertiary));
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-rainbow {
+  animation: rainbow 4s linear infinite;
+  background-image: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-tertiary),
+    var(--color-background)
+  );
+  background-size: 200% 200%;
+}
+
+.animate-rainbow:hover {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-tertiary),
+    var(--color-background)
+  );
+}
+
+.landscape-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
